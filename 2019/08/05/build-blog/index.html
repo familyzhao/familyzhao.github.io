@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="介绍了 string 与char int char* 的转化，for 枚举类型，和INT_MAX">
+<meta name="description" content="基于hexo github 搭建主题为nextT的博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C—的小问题">
-<meta property="og:url" content="http://yoursite.com/2019/08/05/C-遇见的小问题/index.html">
+<meta property="og:title" content="build_blog">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/build-blog/index.html">
 <meta property="og:site_name" content="ReachD">
-<meta property="og:description" content="介绍了 string 与char int char* 的转化，for 枚举类型，和INT_MAX">
+<meta property="og:description" content="基于hexo github 搭建主题为nextT的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-05T14:26:08.177Z">
+<meta property="og:updated_time" content="2019-08-05T14:23:17.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C—的小问题">
-<meta name="twitter:description" content="介绍了 string 与char int char* 的转化，for 枚举类型，和INT_MAX">
+<meta name="twitter:title" content="build_blog">
+<meta name="twitter:description" content="基于hexo github 搭建主题为nextT的博客">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/05/C-遇见的小问题/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/build-blog/">
 
 
 
 
 
-  <title>C—的小问题 | ReachD</title>
+  <title>build_blog | ReachD</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/C-遇见的小问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/build-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Reach Dong">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C—的小问题</h1>
+          <h1 class="post-title" itemprop="name headline">build_blog</h1>
         
 
         <div class="post-meta">
@@ -271,7 +271,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T21:31:02+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T21:43:01+08:00">
                 2019-08-05
               </time>
             
@@ -294,8 +294,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
                   </a>
                 </span>
 
@@ -331,26 +331,37 @@
       
 
       
-        <p>介绍了 string 与char int char* 的转化，for 枚举类型，和INT_MAX</p>
+        <p>基于hexo github 搭建主题为nextT的博客</p>
 <a id="more"></a>
+<h1 id="github-搭建blog"><a href="#github-搭建blog" class="headerlink" title="github 搭建blog"></a>github 搭建blog</h1><h2 id="创建github-库"><a href="#创建github-库" class="headerlink" title="创建github 库"></a>创建github 库</h2><p>创建于用户名相同的github库 命名为user_name.github.io</p>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>方法百度</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>更换nmp 为淘宝源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm config set registry https://registry.npm.taobao.org/</span><br><span class="line"></span><br><span class="line">$ npm config get registry</span><br></pre></td></tr></table></figure>
 
-<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="string转const-char"><a href="#string转const-char" class="headerlink" title="string转const char*"></a>string转const char*</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* c_s = s.c_str();</span><br></pre></td></tr></table></figure>
+<p>安装 hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str=“world”;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *p = str.c_str(); <span class="comment">// 要加const或者等号右边用char*</span></span><br><span class="line"> <span class="keyword">const</span> <span class="keyword">char</span> *p = str.data(); <span class="comment">// data():与c_str()类似，但是返回的数组不以空字符终止</span></span><br></pre></td></tr></table></figure>
+<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>定位到自己创建的blog 文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/blog $ hexo init</span><br></pre></td></tr></table></figure>
 
-<h2 id="const-char-转string"><a href="#const-char-转string" class="headerlink" title="const char*转string"></a>const char*转string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* c_s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(c_s)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>安装一些组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmp install</span><br></pre></td></tr></table></figure>
 
-<h2 id="string转char"><a href="#string转char" class="headerlink" title="string转char*"></a>string转char*</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">char</span>* c;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> len = s.length();</span><br><span class="line">c =<span class="keyword">new</span> <span class="keyword">char</span>[len+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(c,s.c_str());</span><br></pre></td></tr></table></figure>
+<h2 id="将Hexo-与github连接"><a href="#将Hexo-与github连接" class="headerlink" title="将Hexo 与github连接"></a>将Hexo 与github连接</h2><p>设置好git, 可百度方法<br>将blog 文件夹下面的站点配置文件_config.yml 进行修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:user_name/user_name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<h2 id="char-转string"><a href="#char-转string" class="headerlink" title="char*转string"></a>char*转string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* cpc =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">char</span>* pc =<span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">100</span>];<span class="comment">//足够长</span></span><br><span class="line"><span class="built_in">strcpy</span>(pc,cpc);</span><br></pre></td></tr></table></figure>
+<h2 id="拷贝主题NexT"><a href="#拷贝主题NexT" class="headerlink" title="拷贝主题NexT"></a>拷贝主题<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a></h2><p>通过git clone 命令进行， 主题会被放在theme 文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
-<h2 id="数字转string"><a href="#数字转string" class="headerlink" title="数字转string"></a>数字转string</h2><p>auto it =  to_string(input) it可以是浮点数，input是char类型是 会得到对应的asicc码；</p>
-<h2 id="char-转string-1"><a href="#char-转string-1" class="headerlink" title="char 转string"></a>char 转string</h2><p>只能通过初始化string 得到单个字母的string类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="number">1</span>,<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> str</span>; str.push_back(<span class="string">'a'</span>);</span><br><span class="line"><span class="built_in">stringstream</span> ss;</span><br><span class="line">ss&lt;&lt;<span class="string">'a'</span>;<span class="built_in">string</span> str2 = ss.str();</span><br></pre></td></tr></table></figure>
+<h2 id="启动主题"><a href="#启动主题" class="headerlink" title="启动主题"></a>启动主题</h2><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<h1 id="for-枚举用法"><a href="#for-枚举用法" class="headerlink" title="for 枚举用法"></a>for 枚举用法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; vec(<span class="number">10.0</span>);</span><br><span class="line"><span class="built_in">string</span> str=<span class="string">"abcdefg"</span>;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; my_map=&#123;&#123;<span class="string">"a"</span>, <span class="number">2</span>&#125;,&#123;<span class="string">"b"</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;it : vec)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it&lt;&lt;<span class="built_in">endl</span>; <span class="comment">// 返回的是引用 可以用来修改容器内内容</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : str)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it&lt;&lt;<span class="built_in">endl</span>; <span class="comment">// 返回的是char</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : my_map)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it.first&lt;&lt;it.second&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//返回的是pair变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>见链接 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="文件内容与文件目录介绍"><a href="#文件内容与文件目录介绍" class="headerlink" title="文件内容与文件目录介绍"></a>文件内容与文件目录介绍</h2><p>hexo 目录中_config.yml 为站点配置文件，source/_post/ 文件夹是存放.md静态文件的目录，其中的.md文件的开头如下<br>其中第三行左边的是类别的关键字（类别的应为就是categoties），右边是具体的类别,不同文件中冒号，左边的是固定的，右边根据需要写所属类别。<br>改模板在\blog\scaffolds\post.md中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: build_blog</span><br><span class="line">date: 2019-08-05 21:43:01</span><br><span class="line">categories: &quot;blog&quot;</span><br></pre></td></tr></table></figure>
 
-<h1 id="int类型的最大最小值"><a href="#int类型的最大最小值" class="headerlink" title="int类型的最大最小值"></a>int类型的最大最小值</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INT_MAX (INT32_MAX)</span><br><span class="line">INT_MIN (INT32_MIN)</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h2><p><strong>hexo 的所有操作都在git bash 上进行 并且定位在/blog 目录下</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g //生成静态网页并存储在public文件夹下</span><br><span class="line">hexo clean // 删除上述文件夹下的文件</span><br><span class="line">hexo s -p 5000 //指定本地端口5000 本地查看网页</span><br><span class="line">hexo d 上传网页 将public/2019...文件夹下的静态网页上传github</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -374,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/05/C-容器的一些小问题/" rel="next" title="C++容器的一些小问题">
-                <i class="fa fa-chevron-left"></i> C++容器的一些小问题
+              <a href="/2019/08/05/C-遇见的小问题/" rel="next" title="C—的小问题">
+                <i class="fa fa-chevron-left"></i> C—的小问题
               </a>
             
           </div>
@@ -383,10 +394,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/05/build-blog/" rel="prev" title="build_blog">
-                build_blog <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,7 +542,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类型转换"><span class="nav-number">1.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#string转const-char"><span class="nav-number">1.1.</span> <span class="nav-text">string转const char*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const-char-转string"><span class="nav-number">1.2.</span> <span class="nav-text">const char*转string</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string转char"><span class="nav-number">1.3.</span> <span class="nav-text">string转char*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-转string"><span class="nav-number">1.4.</span> <span class="nav-text">char*转string</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字转string"><span class="nav-number">1.5.</span> <span class="nav-text">数字转string</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-转string-1"><span class="nav-number">1.6.</span> <span class="nav-text">char 转string</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#for-枚举用法"><span class="nav-number">2.</span> <span class="nav-text">for 枚举用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#int类型的最大最小值"><span class="nav-number">3.</span> <span class="nav-text">int类型的最大最小值</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#github-搭建blog"><span class="nav-number">1.</span> <span class="nav-text">github 搭建blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建github-库"><span class="nav-number">1.1.</span> <span class="nav-text">创建github 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建hexo文件夹"><span class="nav-number">1.4.</span> <span class="nav-text">创建hexo文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将Hexo-与github连接"><span class="nav-number">1.5.</span> <span class="nav-text">将Hexo 与github连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拷贝主题NexT"><span class="nav-number">1.6.</span> <span class="nav-text">拷贝主题NexT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动主题"><span class="nav-number">1.7.</span> <span class="nav-text">启动主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置主题"><span class="nav-number">1.8.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">2.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容与文件目录介绍"><span class="nav-number">2.1.</span> <span class="nav-text">文件内容与文件目录介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-常用命令"><span class="nav-number">2.2.</span> <span class="nav-text">hexo 常用命令</span></a></li></ol></li></ol></div>
             
 
           </div>
