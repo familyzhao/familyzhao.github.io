@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="this is my blog hahhh">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="C++ 容器的使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++容器">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/C++容器/index.html">
 <meta property="og:site_name" content="ReachD">
-<meta property="og:description" content="this is my blog hahhh">
+<meta property="og:description" content="C++ 容器的使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-05T08:14:32.503Z">
+<meta property="og:updated_time" content="2019-08-05T09:06:35.323Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="this is my blog hahhh">
+<meta name="twitter:title" content="C++容器">
+<meta name="twitter:description" content="C++ 容器的使用">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/C++容器/">
 
 
 
 
 
-  <title>分类 | ReachD</title>
+  <title>C++容器 | ReachD</title>
   
 
 
@@ -240,40 +240,160 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/C++容器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Reach Dong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/pika.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ReachD">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 1 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">C++容器</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T16:44:11+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>C++ 容器的使用</p>
+<a id="more"></a>
+
+<p>容器的初始化：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec(<span class="number">10</span>,<span class="number">5</span>);<span class="comment">// 初始化10个5</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec(<span class="number">10</span>); <span class="comment">// 初始化10个位置</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;my_sec&#123;my_vec.begin()+<span class="number">2</span>,my_vec.end()<span class="number">-1</span>&#125;; <span class="comment">//通过my_vec进行初始化[2:-1)</span></span><br></pre></td></tr></table></figure>
+
+<p>vector.size()与int类型不能用 min函数比较大小</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans(<span class="number">10</span>,<span class="number">5</span>);</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_v&#123;ans.begin()+<span class="number">2</span>,ans.end()<span class="number">-5</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> anss = min(<span class="number">5</span>,ans.size());</span><br><span class="line"><span class="comment">//会报错no matching function for call to 'min'   auto anss = min(5,ans.size()); ans.size()不是int类型 转化为int 才能比较。</span></span><br></pre></td></tr></table></figure>
+
+<p>数组的初始化：</p>
+<p>数组指针的初始化：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ListNode* cur, *head, *last;</span><br></pre></td></tr></table></figure>
+
+<p>sort函数 的自定义</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sort(numbers.begin(),numbers.end(),my_sort);</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">bool</span> <span class="title">my_sort</span><span class="params">(<span class="keyword">int</span> A, intB)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> A&lt;B;<span class="comment">//A靠前</span></span><br><span class="line">&#125;</span><br><span class="line">my_sort函数为成员函数时（成员函数默认第一个参数是*<span class="keyword">this</span>） 需要加<span class="keyword">static</span> 作为一般函数（没有<span class="keyword">this</span>参数）是不需要</span><br><span class="line">​`</span><br></pre></td></tr></table></figure>
+
+<p>C++ 容器find 函数<br>​<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">it.find(target,index) <span class="comment">//从index开始查找target 查找到返回index 否则返回大于size()的整数</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
