@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="title: C++容器的一些小问题date: 2019-08-05 18:51:49categories: “C++” 关于初学C++容器的的一些方法的简单记录">
+<meta name="description" content="关于初学C++容器的的一些方法的简单记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ReachD">
+<meta property="og:title" content="C++容器">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/C-容器的一些小问题/index.html">
 <meta property="og:site_name" content="ReachD">
-<meta property="og:description" content="title: C++容器的一些小问题date: 2019-08-05 18:51:49categories: “C++” 关于初学C++容器的的一些方法的简单记录">
+<meta property="og:description" content="关于初学C++容器的的一些方法的简单记录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-06T09:21:42.194Z">
+<meta property="og:updated_time" content="2019-08-06T09:30:49.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReachD">
-<meta name="twitter:description" content="title: C++容器的一些小问题date: 2019-08-05 18:51:49categories: “C++” 关于初学C++容器的的一些方法的简单记录">
+<meta name="twitter:title" content="C++容器">
+<meta name="twitter:description" content="关于初学C++容器的的一些方法的简单记录">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title> | ReachD</title>
+  <title>C++容器 | ReachD</title>
   
 
 
@@ -291,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">C++容器</h1>
         
 
         <div class="post-meta">
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T22:04:21+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T21:31:02+08:00">
                 2019-08-05
               </time>
             
@@ -313,6 +313,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -341,8 +363,7 @@
       
 
       
-        <p>title: C++容器的一些小问题<br>date: 2019-08-05 18:51:49<br>categories: “C++”</p>
-<p>关于初学C++容器的的一些方法的简单记录</p>
+        <p>关于初学C++容器的的一些方法的简单记录</p>
 <a id="more"></a>
 
 <h1 id="容器的初始化与索引数据类型："><a href="#容器的初始化与索引数据类型：" class="headerlink" title="容器的初始化与索引数据类型："></a>容器的初始化与索引数据类型：</h1><h2 id="vector初始化"><a href="#vector初始化" class="headerlink" title="vector初始化"></a>vector初始化</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec(<span class="number">10</span>,<span class="number">5</span>);<span class="comment">// 初始化10个5</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; my_vec(<span class="number">10</span>); <span class="comment">// 初始化10个位置</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;my_sec&#123;my_vec.begin()+<span class="number">2</span>,my_vec.end()<span class="number">-1</span>&#125;; <span class="comment">//通过my_vec进行初始化[2:-1)</span></span><br></pre></td></tr></table></figure>
@@ -386,18 +407,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/05/build-blog/" rel="next" title="build_blog">
-                <i class="fa fa-chevron-left"></i> build_blog
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/06/动态规划/" rel="prev" title="动态规划">
-                动态规划 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/05/C-遇见的小问题/" rel="prev" title="C—的小问题">
+                C—的小问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
