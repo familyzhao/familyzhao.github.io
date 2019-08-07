@@ -363,37 +363,21 @@
       
 
       
-        <p>基于hexo github 搭建主题为nextT的博客</p>
-<a id="more"></a>
+        <p>基于hexo github 搭建主题为nextT的博客<br><a id="more"></a></p>
 <h1 id="github-搭建blog"><a href="#github-搭建blog" class="headerlink" title="github 搭建blog"></a>github 搭建blog</h1><h2 id="创建github-库"><a href="#创建github-库" class="headerlink" title="创建github 库"></a>创建github 库</h2><p>创建于用户名相同的github库 命名为user_name.github.io</p>
 <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>方法百度</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>更换nmp 为淘宝源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm config set registry https://registry.npm.taobao.org/</span><br><span class="line"></span><br><span class="line">$ npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p>安装 hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>定位到自己创建的blog 文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/blog $ hexo init</span><br></pre></td></tr></table></figure>
-
-<p>安装一些组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmp install</span><br></pre></td></tr></table></figure>
-
-<h2 id="将Hexo-与github连接"><a href="#将Hexo-与github连接" class="headerlink" title="将Hexo 与github连接"></a>将Hexo 与github连接</h2><p>设置好git, 可百度方法<br>将blog 文件夹下面的站点配置文件_config.yml 进行修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:user_name/user_name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="拷贝主题NexT"><a href="#拷贝主题NexT" class="headerlink" title="拷贝主题NexT"></a>拷贝主题<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a></h2><p>通过git clone 命令进行， 主题会被放在theme 文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>更换nmp 为淘宝源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm config set registry https://registry.npm.taobao.org/</span><br><span class="line"></span><br><span class="line">$ npm config get registry</span><br></pre></td></tr></table></figure></p>
+<p>安装 hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>定位到自己创建的blog 文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/blog $ hexo init</span><br></pre></td></tr></table></figure></p>
+<p>安装一些组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nmp install</span><br></pre></td></tr></table></figure></p>
+<h2 id="将Hexo-与github连接"><a href="#将Hexo-与github连接" class="headerlink" title="将Hexo 与github连接"></a>将Hexo 与github连接</h2><p>设置好git, 可百度方法<br>将blog 文件夹下面的站点配置文件_config.yml 进行修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:user_name/user_name.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<h2 id="拷贝主题NexT"><a href="#拷贝主题NexT" class="headerlink" title="拷贝主题NexT"></a>拷贝主题<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a></h2><p>通过git clone 命令进行， 主题会被放在theme 文件夹下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
 <h2 id="启动主题"><a href="#启动主题" class="headerlink" title="启动主题"></a>启动主题</h2><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
 <h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>见链接 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT</a></p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="文件内容与文件目录介绍"><a href="#文件内容与文件目录介绍" class="headerlink" title="文件内容与文件目录介绍"></a>文件内容与文件目录介绍</h2><p>hexo 目录中_config.yml 为站点配置文件，source/_post/ 文件夹是存放.md静态文件的目录，其中的.md文件的开头如下<br>其中第三行左边的是类别的关键字（类别的应为就是categoties），右边是具体的类别,不同文件中冒号，左边的是固定的，右边根据需要写所属类别。<br>改模板在\blog\scaffolds\post.md中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: build_blog</span><br><span class="line">date: 2019-08-05 21:43:01</span><br><span class="line">categories: &quot;blog&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="文件内容与文件目录介绍"><a href="#文件内容与文件目录介绍" class="headerlink" title="文件内容与文件目录介绍"></a>文件内容与文件目录介绍</h2><p>hexo 目录中_config.yml 为站点配置文件，source/_post/ 文件夹是存放.md静态文件的目录，其中的.md文件的开头如下<br>其中第三行左边的是类别的关键字（类别的应为就是categoties），右边是具体的类别,不同文件中冒号，左边的是固定的，右边根据需要写所属类别。<br>改模板在\blog\scaffolds\post.md中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: build_blog</span><br><span class="line">date: 2019-08-05 21:43:01</span><br><span class="line">categories: &quot;blog&quot;</span><br></pre></td></tr></table></figure></p>
+<h2 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h2><p><strong>hexo 的所有操作都在git bash 上进行 并且定位在/blog 目录下</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g //生成静态网页并存储在public文件夹下</span><br><span class="line">hexo clean // 删除上述文件夹下的文件</span><br><span class="line">hexo s -p 5000 //指定本地端口5000 本地查看网页</span><br><span class="line">hexo d 上传网页 将public/2019...文件夹下的静态网页上传github</span><br></pre></td></tr></table></figure></p>
 
-<h2 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h2><p><strong>hexo 的所有操作都在git bash 上进行 并且定位在/blog 目录下</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g //生成静态网页并存储在public文件夹下</span><br><span class="line">hexo clean // 删除上述文件夹下的文件</span><br><span class="line">hexo s -p 5000 //指定本地端口5000 本地查看网页</span><br><span class="line">hexo d 上传网页 将public/2019...文件夹下的静态网页上传github</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -508,7 +492,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -519,7 +503,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1106,6 +1090,8 @@
   
 
   
+  
+
 
   
 

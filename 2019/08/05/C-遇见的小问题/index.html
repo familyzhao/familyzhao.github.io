@@ -365,23 +365,14 @@
       
         <p>介绍了 string 与char int char* 的转化，for 枚举类型，和INT_MAX</p>
 <a id="more"></a>
-
 <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="string转const-char"><a href="#string转const-char" class="headerlink" title="string转const char*"></a>string转const char*</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* c_s = s.c_str();</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str=“world”;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *p = str.c_str(); <span class="comment">// 要加const或者等号右边用char*</span></span><br><span class="line"> <span class="keyword">const</span> <span class="keyword">char</span> *p = str.data(); <span class="comment">// data():与c_str()类似，但是返回的数组不以空字符终止</span></span><br></pre></td></tr></table></figure>
-
 <h2 id="const-char-转string"><a href="#const-char-转string" class="headerlink" title="const char*转string"></a>const char*转string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* c_s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(c_s)</span></span>;</span><br></pre></td></tr></table></figure>
-
 <h2 id="string转char"><a href="#string转char" class="headerlink" title="string转char*"></a>string转char*</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">char</span>* c;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> len = s.length();</span><br><span class="line">c =<span class="keyword">new</span> <span class="keyword">char</span>[len+<span class="number">1</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(c,s.c_str());</span><br></pre></td></tr></table></figure>
-
 <h2 id="char-转string"><a href="#char-转string" class="headerlink" title="char*转string"></a>char*转string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* cpc =<span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">char</span>* pc =<span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">100</span>];<span class="comment">//足够长</span></span><br><span class="line"><span class="built_in">strcpy</span>(pc,cpc);</span><br></pre></td></tr></table></figure>
-
 <h2 id="数字转string"><a href="#数字转string" class="headerlink" title="数字转string"></a>数字转string</h2><p>auto it =  to_string(input) it可以是浮点数，input是char类型是 会得到对应的asicc码；</p>
-<h2 id="char-转string-1"><a href="#char-转string-1" class="headerlink" title="char 转string"></a>char 转string</h2><p>只能通过初始化string 得到单个字母的string类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="number">1</span>,<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> str</span>; str.push_back(<span class="string">'a'</span>);</span><br><span class="line"><span class="built_in">stringstream</span> ss;</span><br><span class="line">ss&lt;&lt;<span class="string">'a'</span>;<span class="built_in">string</span> str2 = ss.str();</span><br></pre></td></tr></table></figure>
-
+<h2 id="char-转string-1"><a href="#char-转string-1" class="headerlink" title="char 转string"></a>char 转string</h2><p>只能通过初始化string 得到单个字母的string类型<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="number">1</span>,<span class="string">'a'</span>)</span></span></span><br><span class="line"><span class="function"><span class="built_in">string</span> str</span>; str.push_back(<span class="string">'a'</span>);</span><br><span class="line"><span class="built_in">stringstream</span> ss;</span><br><span class="line">ss&lt;&lt;<span class="string">'a'</span>;<span class="built_in">string</span> str2 = ss.str();</span><br></pre></td></tr></table></figure></p>
 <h1 id="for-枚举用法"><a href="#for-枚举用法" class="headerlink" title="for 枚举用法"></a>for 枚举用法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; vec(<span class="number">10.0</span>);</span><br><span class="line"><span class="built_in">string</span> str=<span class="string">"abcdefg"</span>;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; my_map=&#123;&#123;<span class="string">"a"</span>, <span class="number">2</span>&#125;,&#123;<span class="string">"b"</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;it : vec)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it&lt;&lt;<span class="built_in">endl</span>; <span class="comment">// 返回的是引用 可以用来修改容器内内容</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : str)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it&lt;&lt;<span class="built_in">endl</span>; <span class="comment">// 返回的是char</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it : my_map)&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;it.first&lt;&lt;it.second&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//返回的是pair变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h1 id="int类型的最大最小值"><a href="#int类型的最大最小值" class="headerlink" title="int类型的最大最小值"></a>int类型的最大最小值</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INT_MAX (INT32_MAX)</span><br><span class="line">INT_MIN (INT32_MIN)</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -493,7 +484,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -504,7 +495,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1091,6 +1082,8 @@
   
 
   
+  
+
 
   
 
