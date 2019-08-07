@@ -5,7 +5,7 @@
     <url>%2F2019%2F08%2F07%2Fhexo-%E5%85%AC%E5%BC%8F-%E5%9B%BE%E7%89%87%2F</url>
     <content type="text"><![CDATA[向博客中添加图片和公式 向博客中添加图片更改站点配置文件将站点的_config.yml文件中的配置项post_asset_folder设为true 1post_asset_folder: true 存放照片执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。 在markdown 中插入照片图片在文章和首页中同时显示，可以使用标签插件语法。_posts/post_name/image.jpg这张照片可以用以下方式访问：1&#123;% asset_img image_name.jpg (This is an image) %&#125; 其中： asset_img 是关键字 后面接空格然后加图片在同名文件夹中的名字，后面括号内的内容可省略，是图片在网页中显示的名字 添加公式更换 Hexo 的 markdown 渲染引擎，hexo-renderer-kramed 引擎是在默认的渲染引擎 hexo-renderer-marked 的基础上修改了一些 bug ，两者比较接近，也比较轻量级12$ npm uninstall hexo-renderer-marked --save$ npm install hexo-renderer-kramed --save 更改站点配置文件然后，跟换引擎后行间公式可以正确渲染了，但是这样还没有完全解决问题，行内公式的渲染还是有问题，因为 hexo-renderer-kramed 引擎也有语义冲突的问题。接下来到博客根目录下，找到node_modules\kramed\lib\rules\inline.js，把第11行的 escape 变量的值做相应的修改： 12 //escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,escape: /^\\([`*\[\]()#$+\-.!_&gt;])/, 这一步是在原基础上取消了对\,{,}的转义(escape)。同时把第20行的em变量也要做相应的修改 12 //em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 重新启动hexo（先clean再generate） 更改主题配置文件在 Next 主题中开启 MathJax 开关, 找到mathjax12345mathjax: enable: true per_page: true engine: mathjax cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML 在文章的头里 添加mathjax： true在根目录下scaffolds/post.md 添加1mathjax: true 之所以要在文章头里设置开关，是因为考虑只有在用到公式的页面才加载 Mathjax，这样不需要渲染数学公式的页面的访问速度就不会受到影响了。没有公式的文章用false 即可。之前生成的页面需要加载mathjax的需要手动添加上述文章头，确保开关为true]]></content>
       <categories>
-        <category>“blog&quot;</category>
+        <category>blog</category>
       </categories>
   </entry>
   <entry>
