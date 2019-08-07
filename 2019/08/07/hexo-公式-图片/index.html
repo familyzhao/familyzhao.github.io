@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="向博客中添加图片更改站点配置文件将站点的_config.yml文件中的配置项post_asset_folder设为true 1post_asset_folder: true 存放照片执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了">
+<meta name="description" content="向博客中添加图片和公式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo_公式_图片">
 <meta property="og:url" content="http://yoursite.com/2019/08/07/hexo-公式-图片/index.html">
 <meta property="og:site_name" content="ReachD">
-<meta property="og:description" content="向博客中添加图片更改站点配置文件将站点的_config.yml文件中的配置项post_asset_folder设为true 1post_asset_folder: true 存放照片执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了">
+<meta property="og:description" content="向博客中添加图片和公式">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-07T11:30:34.972Z">
+<meta property="og:updated_time" content="2019-08-07T11:38:19.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo_公式_图片">
-<meta name="twitter:description" content="向博客中添加图片更改站点配置文件将站点的_config.yml文件中的配置项post_asset_folder设为true 1post_asset_folder: true 存放照片执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了">
+<meta name="twitter:description" content="向博客中添加图片和公式">
 
 
 
@@ -363,7 +363,9 @@
       
 
       
-        <h1 id="向博客中添加图片"><a href="#向博客中添加图片" class="headerlink" title="向博客中添加图片"></a>向博客中添加图片</h1><h2 id="更改站点配置文件"><a href="#更改站点配置文件" class="headerlink" title="更改站点配置文件"></a>更改站点配置文件</h2><p>将站点的_config.yml文件中的配置项post_asset_folder设为true</p>
+        <p>向博客中添加图片和公式</p>
+<a id="more"></a>
+<h1 id="向博客中添加图片"><a href="#向博客中添加图片" class="headerlink" title="向博客中添加图片"></a>向博客中添加图片</h1><h2 id="更改站点配置文件"><a href="#更改站点配置文件" class="headerlink" title="更改站点配置文件"></a>更改站点配置文件</h2><p>将站点的_config.yml文件中的配置项post_asset_folder设为true</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
 <h2 id="存放照片"><a href="#存放照片" class="headerlink" title="存放照片"></a>存放照片</h2><p>执行命令$ hexo new post_name，在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。</p>
 <h2 id="在markdown-中插入照片"><a href="#在markdown-中插入照片" class="headerlink" title="在markdown 中插入照片"></a>在markdown 中插入照片</h2><p>图片在文章和首页中同时显示，可以使用标签插件语法。_posts/post_name/image.jpg这张照片可以用以下方式访问：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image_name.jpg (This is an image) %&#125;</span><br></pre></td></tr></table></figure></p>
